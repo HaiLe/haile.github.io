@@ -1,0 +1,7 @@
+# Jekyll configuration
+
+name: Hai Le's Pages
+description: My adventures in coding
+url: "http://haile.github.io"
+markdown: kramdown
+highlighter: rouge
