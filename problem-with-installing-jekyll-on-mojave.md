@@ -1,5 +1,5 @@
 ---
-title: Issues when working with Jekyll and Github pages
+title: Jekyll
 layout: default
 ---
 
@@ -48,7 +48,11 @@ Actually, you could use both!
 
 Someone reported the issue here: https://github.com/github/pages-gem/issues/416
 
+---
 
+## Issue 4: Learn how to use Jekyll Minima font correctly
+
+[https://github.com/jekyll/minima](https://github.com/jekyll/minima)
 
 
 

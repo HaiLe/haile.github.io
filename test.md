@@ -1,5 +1,5 @@
 ---
-title: test page
+title: Misc
 layout: default
 ---
 

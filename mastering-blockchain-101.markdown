@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Mastering blockchain - Blockchain 101
+title: Blockchain
 permalink: /mastering-blockchain-101
 ---
 
