@@ -40,6 +40,7 @@ Here are the steps that resolved the issue.
 # Issue 2: Markdown file not rendering correctly
 
 It turns out, in Jekyll, you need to use `.markdown` as an extension, and not `.md`
+Actually, you could use both!
 
 ---
 
