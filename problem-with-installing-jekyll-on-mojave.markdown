@@ -1,7 +1,6 @@
 ---
 layout: default
 title: Issues when working with Jekyll and Github pages
-permalink: /problem-with-jekyll-installation/
 ---
 
 # Issues when working with Jekyll and Github pages
@@ -12,7 +11,7 @@ permalink: /problem-with-jekyll-installation/
 
 Recently I ran into a problem install Jekyll with Mac Mojave. 
 
-There was a bug reported [[https://github.com/jekyll/jekyll/issues/7274]] 
+There was a bug reported [here](https://github.com/jekyll/jekyll/issues/7274) 
 
 Here are the steps that resolved the issue.
 

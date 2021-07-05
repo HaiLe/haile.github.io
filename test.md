@@ -1,8 +1,9 @@
 ---
+title: test page
 layout: default
-title: Issues when working with Jekyll and Github pages
 ---
 
-# Hello Testing
-
+# hello
 It works whether you name it testing 
+
+# test again
