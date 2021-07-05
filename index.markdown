@@ -6,4 +6,4 @@ layout: default
 ---
 
 - [test](test)
-- [Problems with installing Jekyll on Mojave](problem-with-installing-jekyll-on-mojave.markdown)
+- [Problems with installing Jekyll on Mojave](problem-with-installing-jekyll-on-mojave.md)
