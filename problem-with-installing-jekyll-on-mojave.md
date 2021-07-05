@@ -1,6 +1,7 @@
 ---
 title: Jekyll
 layout: default
+categories: jekyll
 ---
 
 # Issues when working with Jekyll and Github pages
