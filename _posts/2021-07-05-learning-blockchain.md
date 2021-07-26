@@ -60,6 +60,14 @@ But Blockchain can -- really?
     and the node that wins it proposes a final value. 
   
 
+# Blockchain
+- Blockchain was introduced in 2008 with the invention of bitcoin. 
+- Electronic cash is the first application of blockchain. 
+
+##### The concept of Electronic cash
+- Accountability and anonymity. 
+- Hashcash - POW system to control email spam.  Simple idea -- legitimate users want to send emails then they are required to 
+compute a hash as a proof that they have spent a reasonable amount of computing resources before sending the email. 
 
 # Questions
 
