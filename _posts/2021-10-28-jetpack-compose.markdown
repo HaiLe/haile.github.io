@@ -86,11 +86,11 @@ In Android, there are other observable types like LiveData, StateFlow, Flow and 
 
 
 
-##### Compose and Recomposition concept in Jetpack Compose
+### Compose and Recomposition concept in Jetpack Compose
 
 ### Unidirectional Data Flow
 
 
 ### Resources
-https://developer.android.com/codelabs/jetpack-compose-state#0
-https://github.com/google/accompanist
+[https://developer.android.com/codelabs/jetpack-compose-state#0]
+[https://github.com/google/accompanist]
