@@ -7,7 +7,7 @@ categories: android jetpack compose livedata
 
 I've recently spent a lot of time learning and building app using Jetpack Compose. Here's my note of all the resources and learning from using Jetpack Compose.
 
-## How to manage UI state inside Jetpack Compose
+### How to manage UI state inside Jetpack Compose
 
 [Google Codelab on Jetpack Compose State](https://developer.android.com/codelabs/jetpack-compose-state#0) shows you how to build a todo list app using the Stateful UI that displays an interactive, editable todo list.
 
@@ -84,12 +84,9 @@ In the ViewModel, the state is represented by LiveData.  LiveData is basically a
 
 In Android, there are other observable types like LiveData, StateFlow, Flow and Observable.
 
-
-
 ### Compose and Recomposition concept in Jetpack Compose
 
 ### Unidirectional Data Flow
-
 
 ### Resources
 [https://developer.android.com/codelabs/jetpack-compose-state#0]
