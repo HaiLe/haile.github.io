@@ -94,13 +94,7 @@ This pattern is called unidirectional data flow where state flows down and event
 
 ### Unidirectional Data Flow
 
-![image](https://haile.github.io/assets/images/unidirectional.png)
-
 ![image](/assets/images/unidirectional.png)
-
-![image](unidirectional.png)
-![image](/unidirectional.png)
-
 
 ### Resources
 [https://developer.android.com/codelabs/jetpack-compose-state#0](https://developer.android.com/codelabs/jetpack-compose-state#0)
