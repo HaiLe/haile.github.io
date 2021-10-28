@@ -19,7 +19,6 @@ What is LiveData? How is it different than viewModelScope?
 
 Understanding `viewModelScope`
 
-
 ### Resources
 
 - [Kotlin coroutines on Android](https://developer.android.com/kotlin/coroutines)
