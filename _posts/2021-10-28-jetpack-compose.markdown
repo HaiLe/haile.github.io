@@ -97,6 +97,7 @@ This pattern is called unidirectional data flow where state flows down and event
 ![image](https://haile.github.io/assets/images/unidirectional.png)
 
 ![image](unidirectional.png)
+![image](/unidirectional.png)
 
 
 ### Resources
