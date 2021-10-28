@@ -84,9 +84,18 @@ In the ViewModel, the state is represented by LiveData.  LiveData is basically a
 
 In Android, there are other observable types like LiveData, StateFlow, Flow and Observable.
 
+In the previous example, ViewModel exposes one event `onNameChanged()` to let the view update the model `name` whenever there's an update to `name`.  This way, we keep `name` in a centralized place let the observers (fragment, activity) listen to the event and update when neccessary.
+
+This pattern is called unidirectional data flow where state flows down and events flow up.
+
+
+
 ### Compose and Recomposition concept in Jetpack Compose
 
 ### Unidirectional Data Flow
+
+![Unidirectional image](/haile.github.io/assets/unidirectional.png)
+
 
 ### Resources
 [https://developer.android.com/codelabs/jetpack-compose-state#0]
