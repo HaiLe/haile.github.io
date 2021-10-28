@@ -5,12 +5,9 @@ date:   2021-10-02 10:21:22 -0700
 categories: android jetpack compose livedata
 ---
 
-# Jetpack Compose
-
 I've recently spent a lot of time learning and building app using Jetpack Compose. Here's my note of all the resources and learning from using Jetpack Compose.
 
-
-##### How to manage UI state inside Jetpack Compose
+## How to manage UI state inside Jetpack Compose
 
 [Google Codelab on Jetpack Compose State](https://developer.android.com/codelabs/jetpack-compose-state#0) shows you how to build a todo list app using the Stateful UI that displays an interactive, editable todo list.
 
