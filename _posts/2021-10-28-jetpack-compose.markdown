@@ -94,7 +94,7 @@ This pattern is called unidirectional data flow where state flows down and event
 
 ### Unidirectional Data Flow
 
-![Unidirectional image](../docs/assets/unidirectional.png)
+![Unidirectional image](unidirectional.png)
 
 
 ### Resources
