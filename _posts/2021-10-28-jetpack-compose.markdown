@@ -98,5 +98,5 @@ This pattern is called unidirectional data flow where state flows down and event
 
 
 ### Resources
-(https://developer.android.com/codelabs/jetpack-compose-state#0)
-(https://github.com/google/accompanist)
+[https://developer.android.com/codelabs/jetpack-compose-state#0](https://developer.android.com/codelabs/jetpack-compose-state#0)
+[https://github.com/google/accompanist](https://github.com/google/accompanist)
