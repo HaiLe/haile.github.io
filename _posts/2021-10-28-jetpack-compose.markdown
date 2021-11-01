@@ -88,7 +88,23 @@ In the previous example, ViewModel exposes one event `onNameChanged()` to let th
 
 This pattern is called unidirectional data flow where state flows down and events flow up.
 
+### Livedata observable example
 
+Here's an example of how you observe the data change in Composable
+
+```kotlin
+val items: List<TodoItem> by todoViewModel.todoItems.observeAsState(listOf())
+```
+
+There are a lot of things going here, so let's explain:
+
+- `val items: List<TodoItem>` - declares a variable `items` of type `List<TodoItem>`
+- `todoViewModel.todoItems` - is a LiveData<List<TodoItem>> from the `ViewModel`
+- `.observeAsState` observes a `LiveData<T>` and converts it into `State<T>` object.  It's here that Compose can react to the value change.  
+- `listOf()` - an initial value to avoid the possible `null()` results before the `LiveData`is initialized, if it wasn't passed `items` would be List<TodoItem>? which is nullable.
+- `by` is the property delegate syntax in Kotlin, it lets us automatically unwrap `State<List<TodoItem>>` from `observeAsState` into the regular `List<TodoItem>`
+
+There are
 
 ### Compose and Recomposition concept in Jetpack Compose
 
