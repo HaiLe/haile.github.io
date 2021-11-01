@@ -104,7 +104,6 @@ There are a lot of things going here, so let's explain:
 - `listOf()` - an initial value to avoid the possible `null()` results before the `LiveData`is initialized, if it wasn't passed `items` would be List<TodoItem>? which is nullable.
 - `by` is the property delegate syntax in Kotlin, it lets us automatically unwrap `State<List<TodoItem>>` from `observeAsState` into the regular `List<TodoItem>`
 
-There are
 
 ### Compose and Recomposition concept in Jetpack Compose
 
