@@ -9,8 +9,6 @@ I've recently spent a lot of time learning and building app using Jetpack Compos
 
 ### How to manage UI state inside Jetpack Compose
 
-[Google Codelab on Jetpack Compose State](https://developer.android.com/codelabs/jetpack-compose-state#0) shows you how to build a todo list app using the Stateful UI that displays an interactive, editable todo list.
-
 In Android, the typical event loop goes like this: event -> update -> display
 - Event - An event occurred
 - Update - An event handler changes the state that is used by the UI
@@ -112,5 +110,8 @@ There are a lot of things going here, so let's explain:
 ![image](/assets/images/unidirectional.png)
 
 ### Resources
-[https://developer.android.com/codelabs/jetpack-compose-state#0](https://developer.android.com/codelabs/jetpack-compose-state#0)
-[https://github.com/google/accompanist](https://github.com/google/accompanist)
+- [https://developer.android.com/codelabs/jetpack-compose-state#0](https://developer.android.com/codelabs/jetpack-compose-state#0)
+
+- [https://github.com/google/accompanist](https://github.com/google/accompanist)
+
+- [Google Codelab on Jetpack Compose State](https://developer.android.com/codelabs/jetpack-compose-state#0) shows you how to build a todo list app using the Stateful UI that displays an interactive, editable todo list.
