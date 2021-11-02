@@ -111,7 +111,20 @@ Composition means drawing things on the screen. It builds a tree of every compos
 
 But when working Jetpack Compose, you should be careful about not introducing a `side-effect`.   A `side effect` is any change that is visible outside of a visible function.  An example of side-effects are updating state in a `ViewModel`,  calling `Random.nextInt()` or writing to a database.
 
+The trick is to `remember` the value that was previously used in when the Row recomposes.   Compose function lets us store values in the composition tree, so we can update the Row to store the value in the composition tree.
+
+`val iconAlpha: Float = remember(todo.id) { randomTint() }`
+
+[remember](https://developer.android.com/reference/kotlin/androidx/compose/runtime/package-summary#remember(kotlin.Function0))
+* gives a composable function memory
+* a value computed by `remember` will be stored in the composition tree, and only be recomputed if the keys to `remember` change.
+* You can think of `remember` as giving storage for a single object to a function the same way a `private val` property does to an object.
+
+
+
 Very important note -- **Recomposition should be side-effect free**
+
+
 
 ### Unidirectional Data Flow
 
