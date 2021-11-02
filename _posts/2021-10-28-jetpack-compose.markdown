@@ -120,11 +120,24 @@ The trick is to `remember` the value that was previously used in when the Row re
 * a value computed by `remember` will be stored in the composition tree, and only be recomputed if the keys to `remember` change.
 * You can think of `remember` as giving storage for a single object to a function the same way a `private val` property does to an object.
 
+The `remember(todo.id) { randomTint() }` call has two parts:
 
+- `key arguments` - the `key` that this remember uses, this is the part that is passed parentheses.  In this case, we pass in the `todo.id`.  Some sort of id here is good.
+
+- `calculation` - a lambda that computes a new value to be remembered.
 
 Very important note -- **Recomposition should be side-effect free**
 
+An **idempotent** composable always produces the same result for the same inputs and has no side-effects on recomposition.
 
+The other thing to consider when adding memory to a composable is always ask yourself "will some caller reasonably want to control this?"
+
+* if the answer is yes, makes it a parameter instead.
+* if the answer is no, keep it as a local variable.
+
+Remember stores values in the Composition, and will forget them if the Composable that called `remember` is removed.  The problem with this is you cannot rely upon `remember` to store important things inside of composables that add and remove children such as `LazyColumn`.  The typical problem when you scroll the list view, the invisible items will be removed and reconstructed depending on its position.  When this happens, all the previously stored `remember` values will be lost, and you might end up with weird bugs.
+
+To fix this, we'll use the state and state hoisting.
 
 ### Unidirectional Data Flow
 
