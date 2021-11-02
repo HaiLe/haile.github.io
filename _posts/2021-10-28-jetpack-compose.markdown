@@ -105,6 +105,14 @@ There are a lot of things going here, so let's explain:
 
 ### Compose and Recomposition concept in Jetpack Compose
 
+One interesting thing that I learned when working with Jetpack Compose is the side effect of the Recomposition process.
+
+Composition means drawing things on the screen. It builds a tree of every composable that was called.  For example, the Composable function will draw a list view on the screen, which will include drawing the LazyColumn and all the Row inside that LazyColumn.  What will happen when the list changes?  The UI gets redraw.  This process of redrawing is called Recomposition.
+
+But when working Jetpack Compose, you should be careful about not introducing a `side-effect`.   A `side effect` is any change that is visible outside of a visible function.  An example of side-effects are updating state in a `ViewModel`,  calling `Random.nextInt()` or writing to a database.
+
+Very important note -- **Recomposition should be side-effect free**
+
 ### Unidirectional Data Flow
 
 ![image](/assets/images/unidirectional.png)
