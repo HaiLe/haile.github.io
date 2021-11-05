@@ -2,7 +2,7 @@
 layout: post
 title:  "Kotlin Coroutines, LiveData and ViewModelScope"
 date:   2021-10-02 10:21:22 -0700
-categories: android kotlin coroutines network livedata
+categories: android
 ---
 
 This post captures my notes about Kotlin Coroutines, LiveData and ViewModelScope.

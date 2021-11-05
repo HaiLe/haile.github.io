@@ -2,7 +2,7 @@
 layout: post
 title:  "Jetpack Compose"
 date:   2021-10-02 10:21:22 -0700
-categories: android jetpack compose livedata
+categories: android
 ---
 
 I've recently spent a lot of time learning and building app using Jetpack Compose. Here's my note of all the resources and learning from using Jetpack Compose.
