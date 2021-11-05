@@ -25,7 +25,7 @@ What is a font-family?
 
 Here's what the font resource file looks like:
 
-```XML
+```xml
 
 <?xml version="1.0" encoding="utf-8"?>
 <font-family xmlns:android="http://schemas.android.com/apk/res/android">
@@ -43,7 +43,7 @@ Here's what the font resource file looks like:
 
 To add font in TextView
 
-```XML
+```xml
 <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -53,7 +53,7 @@ To add font in TextView
 
 To add font to styles
 
-```XML
+```xml
 
 <style name="customfontstyle" parent="@android:style/TextAppearance.Small">
     <item name="android:fontFamily">@font/lobster</item>
