@@ -7,8 +7,9 @@ categories: web
 
 This post captures notes about the React web project. 
 
-[Set up][1]
-
+* [Set up][1]
+* [Adding basic index.js, index.html and index.css][2]
+* 
 # Set up 
 
 Here are the steps to start the React project from scratch.  
@@ -117,14 +118,91 @@ module.exports = {
 }
 ```
 
-You can view the sample project here: [https://github.com/HaiLe/sportdashboard][2]
+You can view the sample project here: [https://github.com/HaiLe/sportdashboard][3]
 
 Once the set up step is done.  You’re ready to add `index.js` and `index.html` file to the project. 
 
+# Adding base files 
+
+Create the app folder.
+
+Add `index.html`
+
+```js
 
 
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <title>Sport Dashboard</title>
+    <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="https://ui.dev/images/favicon.png">
+</head>
+<body>
+<div id="app"></div>
+</body>
+</html>
 
+```
+
+
+Add `index.css`
+
+```css
+
+html, body, #app {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica Neue, sans-serif;
+}
+
+ul {
+    padding: 0;
+}
+
+li {
+    list-style-type: none;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px;
+}
+
+
+```
+
+Add `index.js`
+
+```js
+
+import * as React from 'react'
+import * as ReactDOM from 'react-dom'
+import './index.css'
+import Popular from "./component/Popular";
+import PopularWithFunction from "./component/PopularWithFunction";
+import Battle from "./component/Battle";
+
+class App extends React.Component {
+    render() {
+        //return <PopularWithFunction/>
+        return <Battle/>
+    }
+}
+
+ReactDOM.render(<App/>, document.getElementById('app'))
+
+```
 
 
 [1]:	#set-up
-[2]:	https://github.com/HaiLe/sportdashboard
+[2]:	#adding-base-files
+[3]:	https://github.com/HaiLe/sportdashboard
