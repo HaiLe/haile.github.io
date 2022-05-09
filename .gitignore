@@ -6,3 +6,4 @@ vendor
 
 .idea
 *.iml
+.Ulysses-Settings.plist

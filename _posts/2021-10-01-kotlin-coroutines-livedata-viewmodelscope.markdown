@@ -9,7 +9,7 @@ This post captures my notes about Kotlin Coroutines, LiveData and ViewModelScope
 
 # Kotlin Coroutines
 
-What is Kotlin Coroutines?
+What is Kotlin Coroutines? And how is it different from RxJava?
 
 # Live Data
 
@@ -21,8 +21,10 @@ Understanding `viewModelScope`
 
 ### Resources
 
-- [Kotlin coroutines on Android](https://developer.android.com/kotlin/coroutines)
+- [Kotlin coroutines on Android][1]
+- [Android KTX][2]
+- [LiveDataScope vs ViewModelScope in Android - Stack Overflow][3]
 
-- [Android KTX](https://developer.android.com/kotlin/ktx#viewmodel)
-
-- [LiveDataScope vs ViewModelScope in Android - Stack Overflow](https://stackoverflow.com/questions/57698932/livedatascope-vs-viewmodelscope-in-android)
+[1]:	https://developer.android.com/kotlin/coroutines
+[2]:	https://developer.android.com/kotlin/ktx#viewmodel
+[3]:	https://stackoverflow.com/questions/57698932/livedatascope-vs-viewmodelscope-in-android
