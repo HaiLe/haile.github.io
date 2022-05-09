@@ -7,6 +7,10 @@ categories: web
 
 This post captures notes about the React web project. 
 
+[Set up][1]
+
 # Set up 
 
 
+
+[1]:	#%20set%20up
