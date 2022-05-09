@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  “React project”
+title:  React project
 date:   2022-05-08 10:21:22 -0700
 categories: web
 ---
