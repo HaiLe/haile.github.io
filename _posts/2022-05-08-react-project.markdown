@@ -35,7 +35,7 @@ npm install --save-dev @babel/core @babel/preset-env @babel/preset-react webpack
  
 ```
 
-The above code will generate the `package.json` and `package-lock.json`
+The above code will generate the `package.json`. 
 
 Modify the `package.json` and `package-lock.json` to set up webpack-dev-server 
 
@@ -119,7 +119,11 @@ module.exports = {
 
 You can view the sample project here: [https://github.com/HaiLe/sportdashboard][2]
 
-Once the set up step is done.  You’re ready to add index.js and index.html file to the project. 
+Once the set up step is done.  You’re ready to add `index.js` and `index.html` file to the project. 
+
+
+
+
 
 
 [1]:	#set-up
