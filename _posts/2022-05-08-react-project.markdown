@@ -9,7 +9,8 @@ This post captures notes about the React web project.
 
 * [Set up][1]
 * [Adding basic index.js, index.html and index.css][2]
-* 
+
+
 # Set up 
 
 Here are the steps to start the React project from scratch.  
