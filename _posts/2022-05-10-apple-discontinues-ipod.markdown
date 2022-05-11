@@ -7,9 +7,9 @@ categories: technology
 
 Today Apple announced that it will discontinue its last iPod model.
 
-Nearly 22 years ago, Steve Jobs introduced the iPod.  The project goal was simple - a little device that holds 1000 songs in your pocket. 
+Nearly 22 years ago, Steve Jobs introduced the iPod.  The project’s goal was simple - a little device that holds 1000 songs in your pocket. 
 
-At the time of the iPod release in October 2001, Apple’s stock price was about $0.30 (adjusted to the stock-split).  Today, the stock price is $155, appreciated about 51,500% since the release of the iPod. 
+At the time of the iPod release in October 2001, Apple’s stock price was about $0.30 (adjusted to the stock-split).  Today, the stock price is $155 — 51,500% apprecitiation since the release of the iPod. 
 
 The iPod marked one of the most amazing comebacks in the history.  It was also one of the greatest inventions of Steve Jobs and laid out the foundation for the iPhone — a device that transformed the mobile devices forever. 
 
