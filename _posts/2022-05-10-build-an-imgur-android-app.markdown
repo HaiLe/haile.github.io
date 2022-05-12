@@ -29,6 +29,79 @@ Here are the stacks:
 
 
 # Imgur API
+[https://apidocs.imgur.com/][1]
+
+Each application has to get the 
+- `client_id`
+- `client_secret`
+
+For the public read only api 
+
+`Authorization: Client-ID <YOUR_CLIENT_ID>`
+
+Client ID: ef236e476516602
+Client Secret: c1fe74199678ed6127357e83946f87ce18eb5034
+
+Sample request to query data from the earth porn
+
+[https://api.imgur.com/3/gallery/r/earthporn/top/month/2][2]
+
+Sample Response
+
+```json
+ "data": [
+    {
+      "id": "xiN4VpW",
+      "title": "I hiked the Inca Trail to Machu Picchu in the Peruvian Andes this week. [4032x3024] [OC]",
+      "description": null,
+      "datetime": 1650852003,
+      "type": "image\/jpeg",
+      "animated": false,
+      "width": 3226,
+      "height": 2419,
+      "size": 845971,
+      "views": 328114,
+      "bandwidth": 277574928694,
+      "vote": null,
+      "favorite": false,
+      "nsfw": false,
+      "section": "EarthPorn",
+      "account_url": null,
+      "account_id": null,
+      "is_ad": false,
+      "in_most_viral": false,
+      "has_sound": false,
+      "tags": [],
+      "ad_type": 0,
+      "ad_url": "",
+      "edited": 0,
+      "in_gallery": false,
+      "link": "https:\/\/i.imgur.com\/xiN4VpW.jpg",
+      "ad_config": {
+        "safeFlags": [
+          "not_in_gallery",
+          "sixth_mod_safe",
+          "subreddit"
+        ],
+        "highRiskFlags": [],
+        "unsafeFlags": [],
+        "wallUnsafeFlags": [],
+        "showsAds": true,
+        "showAdLevel": 2
+      },
+      "comment_count": null,
+      "favorite_count": null,
+      "ups": null,
+      "downs": null,
+      "points": null,
+      "score": 319727,
+      "is_album": false
+    }
+],
+"success":true, 
+"status": 200
+
+```
 
 # Android MVVM
 
@@ -41,3 +114,6 @@ Here are the stacks:
 
 
 
+
+[1]:	https://apidocs.imgur.com/
+[2]:	https://api.imgur.com/3/gallery/r/earthporn/top/month/0
