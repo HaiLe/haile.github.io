@@ -105,7 +105,30 @@ Sample Response
 
 # Android MVVM
 
+What are the benefits of using MVVM? 
+
+What is an example of using a sample MVVM activity and view model?
+
+
+# Kotlin Coroutines
+
+# LiveData
+
+How to use LiveData in the app?
+
+What is LiveData good for?
+
+# RecyclerView
+
+# Fragments
+
+# Flow
+
 # Hilt Dependency Injection
+
+Why Hilt Dependency Injection?
+
+How do you do dependency injection using Hilt?
 
 
 # Retrofit
@@ -113,6 +136,12 @@ Sample Response
 [Retrofit][3] is a type-safe HTTP client for Android and Java. 
 
 You can view the full documentation here [https://square.github.io/retrofit/][4]
+
+Add the dependency to project `build.gradle` file
+
+```bash
+implementation 'com.squareup.retrofit2:retrofit:(insert latest version)'
+```
 
 **How to pass an authorization header into retrofit? **
 
@@ -146,13 +175,25 @@ Adding an interceptor to Network Retrofit request
 
 # Moshi
 
+Questions: 
+
+Why is Moshi better than GSON?
+How to integrate Moshi and use it with Retrofit?
+Who developed Moshi?
+
+
 [https://github.com/square/moshi/][6]
 
 
 
 # Sandwich API
 
+Why should you use the Sandwich API?
+How do you enable timeout and caching using Sandwich API?
 
+# Glide
+
+What is Glide good for?
 
 
 [1]:	https://apidocs.imgur.com/
