@@ -109,7 +109,47 @@ Sample Response
 
 
 # Retrofit
+
+[Retrofit][3] is a type-safe HTTP client for Android and Java. 
+
+You can view the full documentation here [https://square.github.io/retrofit/][4]
+
+**How to pass an authorization header into retrofit? **
+
+There are a few ways that you could do this.  One is to use the `@Header` parameter every time you’re doing a retrofit request
+
+```kt
+  @GET(Constants.POSTS_URL)
+    fun fetchPosts(@Header("Authorization") token: String): Call<PostsResponse>
+
+```
+
+But this is inconvenient because you have to pass the Header every time. 
+
+The better way is to use an Retrofit Interceptor. 
+
+**How do you set a timeout for Retrofit? **
+
+**How to integrate Moshi with Retrofit? **
+
+**How to do a GET request with query parameters using Retrofit?**
+
+How to do a POST request using retrofit?
+
+How to do a multipart request using retrofit? 
+
+What is logging interceptor and how do you use it?
+
+[https://medium.com/android-news/token-authorization-with-retrofit-android-oauth-2-0-747995c79720][5]
+
+Adding an interceptor to Network Retrofit request
+
 # Moshi
+
+[https://github.com/square/moshi/][6]
+
+
+
 # Sandwich API
 
 
@@ -117,3 +157,7 @@ Sample Response
 
 [1]:	https://apidocs.imgur.com/
 [2]:	https://api.imgur.com/3/gallery/r/earthporn/top/month/0
+[3]:	https://github.com/square/retrofit
+[4]:	https://square.github.io/retrofit/
+[5]:	https://medium.com/android-news/token-authorization-with-retrofit-android-oauth-2-0-747995c79720
+[6]:	https://github.com/square/moshi/
