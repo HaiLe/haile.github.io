@@ -15,26 +15,29 @@ Here are the stacks:
 	- Kotlin Coroutines
 	- Hilt Dependency Injection
 
+
 - Networking
 	- Retrofit
 	- Moshi - JSON parsing
 	- Sandwich - handle APIResponse
 
+
 - Data Layer
 	- Room
 
-- Imgur API 
-
-# Imgur API 
-
-## Android MVVM
-
-## Hilt Dependency Injection
+- Imgur API
 
 
-## Retrofit 
-## Moshi
-## Sandwich API 
+# Imgur API
+
+# Android MVVM
+
+# Hilt Dependency Injection
+
+
+# Retrofit
+# Moshi
+# Sandwich API
 
 
 
