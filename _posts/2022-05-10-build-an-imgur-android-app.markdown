@@ -183,6 +183,31 @@ class HelloCodelabActivity : AppCompatActivity() {
 ```
 
 
+```kotlin
+
+package network
+
+import okhttp3.Interceptor
+
+class ImgurAuthInterceptor : Interceptor {
+
+    // api constants
+    val IMGUR_CLIENT_ID = "ef236e476516602"
+    val IMGUR_CLIENT_SECRET = "c1fe74199678ed6127357e83946f87ce18eb5034"
+
+    override fun intercept(chain: Interceptor.Chain): okhttp3.Response {
+        var request = chain.request()
+        request = request.newBuilder().header("Authorization", "Client-ID $IMGUR_CLIENT_ID").build()
+        return chain.proceed(request)
+    }
+}
+
+
+```
+
+
+
+
 ```kt
 
 package network
