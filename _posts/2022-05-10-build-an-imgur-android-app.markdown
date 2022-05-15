@@ -27,7 +27,6 @@ Here are the stacks:
 
 - Imgur API
 
-
 # Imgur API
 [https://apidocs.imgur.com/][1]
 
@@ -155,9 +154,114 @@ There are a few ways that you could do this.  One is to use the `@Header` parame
 
 But this is inconvenient because you have to pass the Header every time. 
 
-The better way is to use an Retrofit Interceptor. 
+The better way is to use an Retrofit Interceptor.  
+
+### Adding an authorization Header
+
+First, implement the interceptor class and add headers to the network request
+
+```kt
+package network
+
+import okhttp3.Interceptor
+
+class ImgurAuthInterceptor : Interceptor {
+
+    // api constants
+    val IMGUR_CLIENT_ID = "ef236e476516602"
+    val IMGUR_CLIENT_SECRET = "c1fe74199678ed6127357e83946f87ce18eb5034"
+
+    override fun intercept(chain: Interceptor.Chain): okhttp3.Response {
+        var request = chain.request()
+        request = request.newBuilder().header("Authorization", "Client-ID $IMGUR_CLIENT_ID").build()
+        return chain.proceed(request)
+    }
+}
+```
+
+In your network module, add the interceptor 
+
+```kt
+package network
+
+import com.google.gson.GsonBuilder
+import com.skydoves.sandwich.adapters.ApiResponseCallAdapterFactory
+import dagger.Module
+import dagger.Provides
+import dagger.hilt.InstallIn
+import dagger.hilt.components.SingletonComponent
+import me.haile.androidmvvm.main.PopularRepoRepository
+import okhttp3.OkHttpClient
+import retrofit2.Retrofit
+import retrofit2.converter.gson.GsonConverterFactory
+import javax.inject.Singleton
+
+@Module
+@InstallIn(SingletonComponent::class)
+object NetworkManager {
+
+    private const val IMGUR_BASE_URL = "https://api.imgur.com/3/"
+    private var imgurApiService: ImgurApiService? = null
+
+    @Singleton
+    @Provides
+    fun getImgurApiService(): ImgurApiService {
+        return imgurApiService ?: kotlin.run {
+            buildImgurNetworkLayer().create(ImgurApiService::class.java)
+        }
+    }
+
+
+    private fun buildImgurNetworkLayer(): Retrofit {
+
+        val client = OkHttpClient.Builder().addInterceptor(ImgurAuthInterceptor()).build()
+        val gsonBuilder = GsonBuilder()
+        val gson = gsonBuilder.create()
+
+        return Retrofit.Builder().baseUrl(IMGUR_BASE_URL)
+            .addConverterFactory(GsonConverterFactory.create(gson))
+            .addCallAdapterFactory(ApiResponseCallAdapterFactory.create())
+            .client(client)
+            .build()
+    }
+
+    @Singleton
+    @Provides
+    fun providesPopularRepository(githubAPIService: GithubAPIService) =
+        PopularRepoRepository(githubAPIService)
+}
+```
+
+
+Here is the code that add the interceptor into the request header, so you don’t have to use the `@Header` every time you’re making a request. 
+
+```kt
+val client = OkHttpClient.Builder().addInterceptor(ImgurAuthInterceptor()).build()
+```
 
 **How do you set a timeout for Retrofit? **
+
+```kt
+val client = OkHttpClient
+            .Builder()
+            .addInterceptor(ImgurAuthInterceptor())
+            .connectTimeout(Constants.CONNECTION_TIMEOUT_IN_MILLIS, TimeUnit.MILLISECONDS)
+            .readTimeout(Constants.CONNECTION_TIMEOUT_IN_MILLIS, TimeUnit.MILLISECONDS)
+            .build()
+```
+
+
+Also, you could add the retryOnConnectionFailure to the request
+
+```kt
+val client = OkHttpClient
+            .Builder()
+            .addInterceptor(ImgurAuthInterceptor())
+            .connectTimeout(Constants.CONNECTION_TIMEOUT_IN_MILLIS, TimeUnit.MILLISECONDS)
+            .readTimeout(Constants.CONNECTION_TIMEOUT_IN_MILLIS, TimeUnit.MILLISECONDS)
+            .retryOnConnectionFailure(true)
+            .build()
+```
 
 **How to integrate Moshi with Retrofit? **
 
@@ -196,9 +300,16 @@ How do you enable timeout and caching using Sandwich API?
 What is Glide good for?
 
 
+# Resources
+
+[https://www.javacodemonk.com/retrofit-basic-authentication-in-android-a47245fb][7]
+
+
+
 [1]:	https://apidocs.imgur.com/
 [2]:	https://api.imgur.com/3/gallery/r/earthporn/top/month/0
 [3]:	https://github.com/square/retrofit
 [4]:	https://square.github.io/retrofit/
 [5]:	https://medium.com/android-news/token-authorization-with-retrofit-android-oauth-2-0-747995c79720
 [6]:	https://github.com/square/moshi/
+[7]:	https://www.javacodemonk.com/retrofit-basic-authentication-in-android-a47245fb
