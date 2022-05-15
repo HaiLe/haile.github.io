@@ -263,13 +263,14 @@ object NetworkManager {
 
 Here is the code that add the interceptor into the request header, so you don’t have to use the `@Header` every time you’re making a request. 
 
-```kt
+```kotlin
 val client = OkHttpClient.Builder().addInterceptor(ImgurAuthInterceptor()).build()
 ```
 
 **How do you set a timeout for Retrofit? **
 
-```kt
+```kotlin
+
 val client = OkHttpClient
             .Builder()
             .addInterceptor(ImgurAuthInterceptor())
@@ -278,10 +279,10 @@ val client = OkHttpClient
             .build()
 ```
 
-
 Also, you could add the retryOnConnectionFailure to the request
 
 ```kt
+
 val client = OkHttpClient
             .Builder()
             .addInterceptor(ImgurAuthInterceptor())
@@ -289,6 +290,7 @@ val client = OkHttpClient
             .readTimeout(Constants.CONNECTION_TIMEOUT_IN_MILLIS, TimeUnit.MILLISECONDS)
             .retryOnConnectionFailure(true)
             .build()
+
 ```
 
 **How to integrate Moshi with Retrofit? **
