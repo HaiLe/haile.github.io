@@ -160,7 +160,31 @@ The better way is to use an Retrofit Interceptor.
 
 First, implement the interceptor class and add headers to the network request
 
+```kotlin
+
+class HelloCodelabActivity : AppCompatActivity() {
+
+   private lateinit var binding: ActivityHelloCodelabBinding
+   var name = ""
+
+   override fun onCreate(savedInstanceState: Bundle?) {
+       /* ... */
+       binding.textInput.doAfterTextChanged {text ->
+           name = text.toString()
+           updateHello()
+       }
+   }
+
+   private fun updateHello() {
+       binding.helloText.text = "Hello, $name"
+   }
+}
+
+```
+
+
 ```kt
+
 package network
 
 import okhttp3.Interceptor
@@ -177,6 +201,8 @@ class ImgurAuthInterceptor : Interceptor {
         return chain.proceed(request)
     }
 }
+
+
 ```
 
 In your network module, add the interceptor 
@@ -230,6 +256,7 @@ object NetworkManager {
     fun providesPopularRepository(githubAPIService: GithubAPIService) =
         PopularRepoRepository(githubAPIService)
 }
+
 ```
 
 
@@ -287,8 +314,6 @@ Who developed Moshi?
 
 
 [https://github.com/square/moshi/][6]
-
-
 
 # Sandwich API
 
