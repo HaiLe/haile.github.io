@@ -29,6 +29,8 @@ Scope functions are functions which define to the scope of the calling object. W
 `let` scope function is used to apply operations on an object and finally return the lambda expression from that scope function. Return type can also be `void`
 
 ```kt
+
+
 /**
  * Calls the specified function [block] 
  * with `this` value as its argument 
@@ -42,8 +44,10 @@ public inline fun <T, R> T.let(block: (T) -> R): R {
     }
     return block(this)
 }
-```
 
+
+
+```
 
 ### `run` 
 
