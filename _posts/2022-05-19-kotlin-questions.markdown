@@ -24,7 +24,7 @@ Kotlin has made our life easy by providing features like extension functions, nu
 
 Scope functions are functions which define to the scope of the calling object. We can apply operations on that object within that scope and return the scope itself from the scope function. 
 
-### `let` 
+### `let`
 
 `let` scope function is used to apply operations on an object and finally return the lambda expression from that scope function. Return type can also be `void`
 
@@ -46,7 +46,69 @@ public inline fun <T, R> T.let(block: (T) -> R): R {
 
 ```
 
-### `run` 
+`let` is an extension function to Template class which takes a lambda as a parameter, apply contract on it and ultimately return the execution of the lambda we passed as a parameter to it. 
+
+Two things to note here: 
+
+1. The return type of the let function is nothing but the last expression we returned from our passed lambda parameter
+2. Since it’s an extension function to the Template class, it can be called on any object. 
+
+**It’s important that we understand the contract**
+
+```kotlin
+
+/**
+ * Specifies the contract of a function.
+ *
+ * The contract description must be at the beginning of a function and have at least one effect.
+ *
+ * Only the top-level functions can have a contract for now.
+ *
+ * @param builder the lambda where the contract of a function is described with the help of the [ContractBuilder] members.
+ */
+@ContractsDsl
+@ExperimentalContracts
+@InlineOnly
+@SinceKotlin("1.3")
+@Suppress("UNUSED_PARAMETER")
+public inline fun contract(builder: ContractBuilder.() -> Unit) { }
+
+```
+
+What contract apply to the scope function?
+
+```kotlin
+
+/**
+ * Specifies that the function parameter [lambda] is invoked in place.
+ *
+ * This contract specifies that:
+ * 1. the function [lambda] can only be invoked during the call of the owner function,
+ *  and it won't be invoked after that owner function call is completed;
+ * 2. _(optionally)_ the function [lambda] is invoked the amount of times specified by the [kind] parameter,
+ *  see the [InvocationKind] enum for possible values.
+ *
+ * A function declaring the `callsInPlace` effect must be _inline_.
+ *
+ */
+/* @sample samples.contracts.callsInPlaceAtMostOnceContract
+* @sample samples.contracts.callsInPlaceAtLeastOnceContract
+* @sample samples.contracts.callsInPlaceExactlyOnceContract
+* @sample samples.contracts.callsInPlaceUnknownContract
+*/
+
+@ContractsDsl public fun  callsInPlace(lambda: Function, kind: InvocationKind = InvocationKind.UNKNOWN): CallsInPlace
+```
+
+This is the same contract as to any other scope function. 
+
+let function will be: 
+1. called only during the owner function will be called.
+	2. called ONLY ONCE
+	3. called on the calling object
+	4. and will return the expression returned by the lambda passed to the let function. 
+
+### `run`
 
 How Kotlin is null-safe?
 
@@ -93,3 +155,9 @@ What is Kotlin Flow?
 Kotlin Flow vs RxJava.
 
 Room vs Realm? Why not Realm?
+
+What is Kotlin scope function?
+
+How do you create a Kotlin extension functions?
+
+
