@@ -148,6 +148,8 @@ What are the different Coroutines Scope?
 
 Why use suspend function in Kotlin Coroutines?
 
+[Kotlin Coroutines suspend function][1]
+
 Explain Coroutine LifecycleScope.
 
 What is Kotlin Flow?
@@ -161,3 +163,5 @@ What is Kotlin scope function?
 How do you create a Kotlin extension functions?
 
 
+
+[1]:	https://stackoverflow.com/questions/47871868/what-does-the-suspend-function-mean-in-a-kotlin-coroutine#:~:text=A%20suspending%20function%20is%20simply,addition%20of%20the%20suspend%20keyword.
