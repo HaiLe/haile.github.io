@@ -8,3 +8,6 @@ vendor
 *.iml
 .Ulysses-Settings.plist
 .Ulysses*
+
+.obsidian
+.DS_store

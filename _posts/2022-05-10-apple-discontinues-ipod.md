@@ -1,19 +1,19 @@
 ---
 layout: post
-title:  Steve Jobs’ iPod introduction 
+title:  Steve Jobs’ iPod Introduction 
 date:   2022-05-10 10:21:22 -0700
 categories: technology
 ---
 
-Today Apple announced it will discontinue its last iPod model.
+Apple's announcement today marks the end of an era as they discontinue their last iPod model. This news serves as a reminder of the impact that this small device had on the music industry when it was introduced nearly 22 years ago by Steve Jobs. The iPod's goal was simple - to hold 1000 songs in your pocket.
 
-Nearly 22 years ago, Steve Jobs introduced the iPod to the world, and changed the music industry forever.  The project’s goal was simple - a little device that holds 1000 songs in your pocket. 
+Back in October 2001, when the iPod was first released, Apple's stock price was just $0.30 (adjusted to the stock split). Fast forward to today, and the stock price has grown to $155, representing a remarkable appreciation of 51,500% for those who invested in Apple back in 2001.
 
-When the iPod was released in October 2001, Apple’s stock price was $0.30 (adjusted to the stock-split).  Today, the stock price is $155.  If you invested in Apple in 2001, the stock price has since appreciated 51,500%. 
+The iPod was truly one of Steve's greatest inventions, and it set the foundation for the revolutionary Apple iPhone, which transformed mobile devices as we know them today. As we bid farewell to the last iPod model, it's worth remembering the impact that this small but mighty device had on the music industry and technology as a whole.
 
-The iPod was one of Steve’s greatest inventions and laid out the foundation for the Apple iPhone — a device that transformed the mobile devices forever. 
+Reflecting back on the introduction of the iPod in 2001, Steve Jobs famously said, "With iPod, Apple has invented a whole new category of digital music player that lets you put your entire music collection in your pocket and listen to it wherever you go." His vision and innovation transformed the way we consume music and paved the way for countless advancements in technology.
 
-Here was the introduction of iPod in 2001 from Steve: 
+Here is Steve Jobs's introduction of the iPod in 2001: 
 
 > The field that we decided to do it in--the choice we made--was music. Now, why music? Well, we love music. And it’s always good to do something you love. More importantly, music’s a part of everyone’s life. Everyone. Music’s been around forever. It will always be around. This is not a speculative market. And, because it’s a part of everyone’s life, it’s a very large target market. All around the world. It knows no boundaries.
 > 
